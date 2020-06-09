@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>命名规范 | 前端typeScript代码规范【孙卫其】</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="typeScript代码规范">
+    <link rel="preload" href="/assets/css/0.styles.b67b31e7.css" as="style"><link rel="preload" href="/assets/js/app.30ab26e9.js" as="script"><link rel="preload" href="/assets/js/2.580019b5.js" as="script"><link rel="preload" href="/assets/js/6.18c7344c.js" as="script"><link rel="prefetch" href="/assets/js/3.1641be55.js"><link rel="prefetch" href="/assets/js/4.ddf82638.js"><link rel="prefetch" href="/assets/js/5.df86ae3a.js"><link rel="prefetch" href="/assets/js/7.8b618885.js"><link rel="prefetch" href="/assets/js/8.8a1cc20b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b67b31e7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端typeScript代码规范【孙卫其】</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/named/" aria-current="page" class="active sidebar-link">命名规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/named/#使用pascalcase为类型命名" class="sidebar-link">使用PascalCase为类型命名</a></li><li class="sidebar-sub-header"><a href="/named/#不要使用i做为接口名前缀" class="sidebar-link">不要使用I做为接口名前缀</a></li><li class="sidebar-sub-header"><a href="/named/#使用pascalcase为接口命名" class="sidebar-link">使用PascalCase为接口命名</a></li><li class="sidebar-sub-header"><a href="/named/#使用pascalcase为枚举命名" class="sidebar-link">使用PascalCase为枚举命名</a></li><li class="sidebar-sub-header"><a href="/named/#使用camelcase为函数命名" class="sidebar-link">使用camelCase为函数命名</a></li><li class="sidebar-sub-header"><a href="/named/#不要为私有属性名添加-前缀" class="sidebar-link">不要为私有属性名添加_前缀</a></li><li class="sidebar-sub-header"><a href="/named/#使用camelcase为属性或本地变量命名" class="sidebar-link">使用camelCase为属性或本地变量命名</a></li><li class="sidebar-sub-header"><a href="/named/#尽可能使用完整的单词拼写命名" class="sidebar-link">尽可能使用完整的单词拼写命名</a></li><li class="sidebar-sub-header"><a href="/named/#命名中不要出现ok，yes，no等词" class="sidebar-link">命名中不要出现ok，yes，no等词</a></li><li class="sidebar-sub-header"><a href="/named/#使用jsdoc代码风格注释" class="sidebar-link">使用JSDoc代码风格注释</a></li></ul></li><li><a href="/type/" class="sidebar-link">类型规范</a></li><li><a href="/other/" class="sidebar-link">其它</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="命名规范"><a href="#命名规范" class="header-anchor">#</a> 命名规范</h1> <h2 id="使用pascalcase为类型命名"><a href="#使用pascalcase为类型命名" class="header-anchor">#</a> 使用PascalCase为类型命名</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>  <span class="token keyword">class</span> <span class="token class-name">PascalCase</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h2 id="不要使用i做为接口名前缀"><a href="#不要使用i做为接口名前缀" class="header-anchor">#</a> 不要使用I做为接口名前缀</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>  <span class="token comment">// 错误</span>
+  <span class="token keyword">interface</span> <span class="token class-name">Inner</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token comment">// 正确</span>
+  <span class="token keyword">interface</span> <span class="token class-name">MyInner</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h2 id="使用pascalcase为接口命名"><a href="#使用pascalcase为接口命名" class="header-anchor">#</a> 使用PascalCase为接口命名</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>  <span class="token keyword">interface</span> <span class="token class-name">PascalCase</span> <span class="token punctuation">{</span>
+    roomStatus<span class="token operator">:</span> <span class="token builtin">boolean</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><h2 id="使用pascalcase为枚举命名"><a href="#使用pascalcase为枚举命名" class="header-anchor">#</a> 使用PascalCase为枚举命名</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>  <span class="token keyword">enum</span> PascalCase <span class="token punctuation">{</span>
+    first<span class="token punctuation">,</span>
+    second<span class="token punctuation">,</span>
+    third
+  <span class="token punctuation">}</span>
+</code></pre></div><h2 id="使用camelcase为函数命名"><a href="#使用camelcase为函数命名" class="header-anchor">#</a> 使用camelCase为函数命名</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>  <span class="token keyword">function</span> <span class="token function">camelCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h2 id="不要为私有属性名添加-前缀"><a href="#不要为私有属性名添加-前缀" class="header-anchor">#</a> 不要为私有属性名添加_前缀</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>  <span class="token comment">// 错误</span>
+  <span class="token keyword">class</span> <span class="token class-name">PascalCase</span> <span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">private</span> _roomStatus <span class="token operator">=</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><h2 id="使用camelcase为属性或本地变量命名"><a href="#使用camelcase为属性或本地变量命名" class="header-anchor">#</a> 使用camelCase为属性或本地变量命名</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>  <span class="token keyword">const</span> roomStatus<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token operator">=</span> <span class="token boolean">false</span>
+</code></pre></div><h2 id="尽可能使用完整的单词拼写命名"><a href="#尽可能使用完整的单词拼写命名" class="header-anchor">#</a> 尽可能使用完整的单词拼写命名</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>  <span class="token comment">// 错误</span>
+  <span class="token keyword">const</span> rmStatus<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token operator">=</span> <span class="token boolean">false</span>
+  <span class="token comment">// 正确</span>
+  <span class="token keyword">const</span> roomStatus<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token operator">=</span> <span class="token boolean">false</span>
+</code></pre></div><h2 id="命名中不要出现ok，yes，no等词"><a href="#命名中不要出现ok，yes，no等词" class="header-anchor">#</a> 命名中不要出现ok，yes，no等词</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>  <span class="token comment">// 错误</span>
+  <span class="token keyword">const</span> noData<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'noData'</span>
+</code></pre></div><h2 id="使用jsdoc代码风格注释"><a href="#使用jsdoc代码风格注释" class="header-anchor">#</a> 使用JSDoc代码风格注释</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>  <span class="token comment">/**
+  * @description 获取房间参数
+  * @param {String} str1 页面初始化完成
+  * @param {String} str2 加入房间成功
+  * @return {String} result 获取状态
+  */</span>
+  <span class="token keyword">function</span> <span class="token function">roomStatusGet</span><span class="token punctuation">(</span><span class="token parameter">str1<span class="token punctuation">,</span> str2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> str1 <span class="token operator">+</span> str2
+  <span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/type/">
+        类型规范
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.30ab26e9.js" defer></script><script src="/assets/js/2.580019b5.js" defer></script><script src="/assets/js/6.18c7344c.js" defer></script>
+  </body>
+</html>
